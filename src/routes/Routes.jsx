@@ -1,0 +1,30 @@
+
+import React, { HashRouter, Routes as Switch, Route } from "react-router-dom";
+import MyProvider from "../context/MyProvider";
+import Header from "../componnents/Header"
+import About from "../componnents/About";
+import Home from "../componnents/Home";
+import Footer from "../componnents/Footer";
+import Content from "../componnents/Content";
+import InfoCard from "../componnents/InfoCard";
+import PlayerDetail from "../componnents/PlayerDetail";
+
+const Routes = () => {
+  return (
+    <MyProvider>
+      <HashRouter>
+        <Header />
+        <Switch>
+          <Route path="/" element={<Home />} />
+          <Route path="/playerDetail" element={<PlayerDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/content" element={<Content />} />
+          <Route path="/infocard" element={<InfoCard/>} />
+        </Switch>
+        <Footer />
+      </HashRouter>
+    </MyProvider>
+  );
+};
+
+export default Routes;

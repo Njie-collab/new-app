@@ -8,7 +8,7 @@ const audioRef=useRef()
 const[isPlaying,setisPlaying]=useState(false)
 
 
-const { title, artist, duration, src, img_src } = location.state;
+const { title, artist, duration, src, img_src,price } = location.state;
 
 const togglePlayPause = () => {
   
@@ -21,13 +21,31 @@ const togglePlayPause = () => {
 };
 
     return (
-      <div>
-        <h3>{title}</h3>
-        <h2>{artist}</h2>
-        <h3>{duration}</h3>
-        <h3>{img_src}</h3>
-        <ReactAudioPlayer src={src} autoPlay controls />
-        <button onClick={togglePlayPause}>click</button>
+      <div
+        className="musicInfo"
+        style={{ marginLeft: "10px", backgroundColor: "light_blue" }}
+        key
+      >
+        <h1>Music Store</h1>
+        <h3>Name:{artist}</h3>
+        <p>Titel:{title}</p>
+        <p>Duration:{duration}</p>
+        <h3>Price{price}</h3>
+        <h3>Src{img_src}</h3>
+        
+        <ReactAudioPlayer
+          style={{
+            backgroundColor: "red",
+            border: "10px",
+            padding: "10px",
+            margin: "10px",
+          }}
+          src={src}
+          autoPlay
+          controls
+          pause
+        />
+        <button onClick={togglePlayPause}>click Here</button>
       </div>
     );
 }

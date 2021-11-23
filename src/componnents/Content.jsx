@@ -12,7 +12,9 @@ function Content() {
   return (
     <div>
       <Images/>
+      <button onClick={clickMe} type="text" name="name">Click </button>
       {/*<InfoCard info={clickMe} />*/}
+      <InfoCard/>
     </div>
   );
 }

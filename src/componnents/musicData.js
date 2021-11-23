@@ -7,6 +7,7 @@
      duration: "2.30",
      src: "Demo.mp3",
      img_src: "",
+     price: "20€",
    },
 
    {
@@ -16,6 +17,7 @@
      duration: "2.30",
      src: "timeless_krs1.wav",
      img_src: "",
+     price: "20€",
    },
 
    {
@@ -25,6 +27,7 @@
      duration: "2.30",
      src: "still dre.mp3",
      img_src: "",
+     price: "20€",
    },
 
    {
@@ -34,6 +37,7 @@
      duration: "2.30 Mins",
      src: "Family.mp3",
      img_src: "",
+     price: "20€",
    },
  ];
 

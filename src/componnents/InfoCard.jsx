@@ -10,25 +10,23 @@ const context =useContext(MyContext)
 
   const handleSubmit=(e)=>{
     e.preventDefault()
+    setSub(e.target.value)
   }
-  const handleDelate=(e)=>{
-  setSub(e.target.value)
-
-  }
+ 
   useEffect(() => {
+    
     
   },[Sub])
 
     return (
       <div>
-        <form action="" 
-        type="submit"
-        method="POST" 
-        onSubmit={Sub}>
+        <form>
           <label htmlFor="Email">Email</label>
           <input type="text" name="Email" />
-          <label htmlFor="Submit"> Submit</label>
-          <button onClick={()=>(handleSubmit)} type="submit">Submit</button>
+          <label name="Password">Password</label>
+          <input type="password" />
+          <label>Submit</label>
+          <button onClick={(e)=>handleSubmit(e)} type="submit">Submit</button> 
         </form>
       </div>
     );

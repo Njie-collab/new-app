@@ -27,7 +27,7 @@ function Header() {
         <NavLink to="/content">
           <li>Content</li>
         </NavLink>
-        <NavLink to="/home">
+        <NavLink to="/musiccart">
           <li>Cart</li>
         </NavLink>
         <NavLink to="/productbtn">

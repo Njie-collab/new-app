@@ -1,12 +1,34 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: auto;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-    color: beige;
  
 }
+body{
+
+}
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  nav {
+    width: 90%;
+    padding: 0;
+  }
+  a {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  nav, ul,li, .right {
+    width: 100%;
+  }
+  }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

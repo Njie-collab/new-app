@@ -6,7 +6,7 @@ import About from "../componnents/About";
 import Home from "../componnents/Home";
 import Footer from "../componnents/Footer";
 import Content from "../componnents/Content";
-import InfoCard from "../componnents/InfoCard";
+import InfoCard from "../componnents/Login";
 import PlayerDetail from "../componnents/PlayerDetail";
 import ProductBtn from "../componnents/ProductBtn";
 import MusicCart from "../componnents/MusicCart";
@@ -21,7 +21,7 @@ const Routes = () => {
           <Route path="/playerDetail" element={<PlayerDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/content" element={<Content />} />
-          <Route path="/" element={<MusicCart />} />
+          <Route path="/musiccart" element={<MusicCart />} />
           <Route path="/productbtn" element={<ProductBtn />} />
           <Route path="/infocard" element={<InfoCard />} />
         </Switch>

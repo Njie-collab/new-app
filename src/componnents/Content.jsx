@@ -1,5 +1,5 @@
 import React from "react";
-import InfoCard from "./InfoCard";
+import InfoCard from "./Login";
 import Images from "./Images"
 
 

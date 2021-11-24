@@ -8,11 +8,12 @@ import musicArray from "../componnents/musicData";
 const MyProvider = (props) => {
 
   const [music] = useState(musicArray);
-  const{togglePlayPause}=useState()
+  /*const{togglePlayPause}=useState()*/
   const [cart, setCart] = useState([]);
+  const [login ,setLogin]=useState({email:"",password:""})
 
   const addtoCart = (element) => {
-    const addItem = cart.find((item) => item.name === element.title);
+    const addItem = cart.find((item) => item.id === element.id);
     if (addItem === undefined) {
       setCart([...cart, { ...element, quantity: 1 }]);
     } else {
@@ -23,7 +24,7 @@ const MyProvider = (props) => {
       setCart(clone);
     }
   };
-  console.log(cart);
+  
 
 
 function handleDelete(element) {
@@ -33,6 +34,7 @@ function handleDelete(element) {
   clone.splice(index, 1);
   setCart(clone);
 }
+
 
 const decremnent = (element) => {
   const subtract = cart.find((item) => item.name === element.name);
@@ -49,17 +51,12 @@ const totalCalc = (item) => {
   return total;
 };
 
-
-
-
-
-
-  
   return (
     <MyContext.Provider
       value={{
         music,
-        togglePlayPause,
+        login,
+        setLogin,
         addtoCart,
         cart,
         handleDelete,
